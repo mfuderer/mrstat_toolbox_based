@@ -55,8 +55,35 @@ for i in 1:nRealizations; goodseed = i
 end 
 
 
+## 2024-10-16 comparisons
+include("setup.jl")
+recon_options = Dict() # erase all existing settings
+nsweeps = 6                                               
+nky = 224                                                 
+nTR = round(Int64, nsweeps*nky)
+ky = 1.0 .*(repeat(1:nky, inner=1, outer=nsweeps)); 
+kz = ones(nsweeps*nky)
+trajectorySet = BLAKJac.TrajectorySet(ky,kz)
+BLAKJac.BLAKJac_defaults!(trajectorySet, recon_options)
+rfFunction = rfDictionary["from_file"]
+saved_H = Dict()
 
+recon_options["useSymmetry"] = true     
+recon_options["TR"]      = 0.01
+recon_options["startstate"] = -1 
+recon_options["sigma_ref"] = 1.4 # See logbook 20220815
 
+recon_options["emphasize_low_freq"] = true 
+recon_options["handleB1"] = "sensitivity" # "no" # "sensitivity" #                      
+recon_options["considerCyclic"] = false  
+
+recon_options["B1metric"] = "multi_point_values" # "multi_point"         
+
+@show recon_options["T1T2set"]
+include("BLAKJac_B1_figures.jl")
+testCase = "20240703X"; Nr=10
+map_B1_sensitivities(testCase,5)
+@show recon_options["T1T2set"]
 
 
 
