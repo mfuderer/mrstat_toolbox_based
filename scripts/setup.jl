@@ -19,6 +19,7 @@ using BlochSimulators
 using Colors
 using Statistics
 using BLAKJac
+using MRSTATToolbox
 using Optim
 include("recon_options.jl")
 

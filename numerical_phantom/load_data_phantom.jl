@@ -21,7 +21,7 @@ function load_data_phantom(recon_options)
         # jldsave("B1.jld2"; B1 = phantom.B₁)
         # phantom.B₁ .= 0.85
     elseif recon_options["numphantom_type"] == "line"
-        phantom = MRSTAT.MRITools.line(vy);
+        phantom = MRSTATToolbox.MRITools.line(vy);
     end
 
     # not properly implemented at the moment
@@ -36,10 +36,13 @@ function load_data_phantom(recon_options)
         fovy = vy * Δy;
         x =  -fovx/2 : Δx : fovx/2 - Δx;
         if vx == 1
-            x = 0.0
+            x = [0.0]
         end
         y =  -fovy/2 : Δy : fovy/2 - Δy;
-        coordinates = vec(tuple.(x,y'));
+        @show typeof(x)
+        @show x
+        #coordinates = vec(tuple.(x,y',1));
+        coordinates = vec(Coordinates.(x,y',1.0));
 
     # Set coilmaps
 
@@ -91,7 +94,7 @@ function load_data_phantom(recon_options)
             # py = repeat(py, reps)
 
             # trajectory = MRSTAT.GradientTrajectories.CartesianTrajectory(nr,ns,Δt_adc,k0,Δk,py);
-            trajectory = BlochSimulators.CartesianTrajectory(nr,ns,Δt_adc,k0,Δkˣ,py, os);
+            trajectory = BlochSimulators.CartesianTrajectory2D(nr,ns,Δt_adc,k0,Δkˣ,py, os);
 
         elseif trajectory == "Radial"
 

@@ -21,7 +21,7 @@ function BLAKJac_load_default_recon_options!(recon_options)
     recon_options["startstate"] = 1.0       # Starting state of the z-magnetisation; +1 for no prepulse, -1 for inversion
     recon_options["halfrange_lt1"]=1.5      # The range over which T1-effect is calculated, spreads over exp(+-halfrange) around T1ref
     recon_options["halfrange_lt2"]=2.5      # The range over which T2-effect is calculated, spreads over exp(+-halfrange) around T2ref
-    recon_options["maxstate"] = 40          # Length of history taken into account in simulating magnetisation from sequence
+    recon_options["maxstate"] = 64          # Length of history taken into account in simulating magnetisation from sequence
     recon_options["nky"]      = 224         # Number of different encoding values simulated; nTR/nky/nkz is number of samples per encoding    
     recon_options["nkz"]      = 1               
     recon_options["maxMeas"]  = 2000        # Maximum number of measurements per phase-encoding (ky) value
