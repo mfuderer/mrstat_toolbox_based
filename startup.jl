@@ -12,7 +12,7 @@
 
 
 # Include sources on Lipari and Navia color maps 
-include("/home/mfuderer/colorResources/RelaxationColor.jl") 
+# include("/home/mfuderer/colorResources/RelaxationColor.jl") 
 
 
 

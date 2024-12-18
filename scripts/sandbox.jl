@@ -87,6 +87,45 @@ map_B1_sensitivities(testCase,5)
 
 
 
+##
+fn = "/smb/user/mfuderer/DS-Data/Radiotherapie/Research/Project/MRSTAT/experiments/miha/Scandata_miha/20_198250c/mrstat_nn/2024-07-21_19_18__nn_1/slice_001/mrstat_output.jld2"
+aaa = load(fn)
+
+##
+# -----  Make test object: gradually increasing T1, but invalid outside a circle
+size = 256; center = size÷2+1; radius = 100; origin = CartesianIndex(center,center)
+d(x::CartesianIndex, y::CartesianIndex) = √( (x[1]-y[1])^2 + (x[2]-y[2])^2 )
+row = [10*i for i in 1:size]
+testT1= zeros(size,size)
+testT1 .= row
+
+# Set invalid values to 0
+allidx = CartesianIndices(testT1)
+invalid = allidx[ d.(origin, allidx) .> radius];
+testT1[invalid] .= 0
+# ---------------------------------------------- Test object made
+
+using QMRIColors
+using PyPlot
+cmap = relaxationColorMap("T1")  # NOTE: simplified map, only valid if no 'vmin' is used in imshow
+
+figure()
+imshow(testT1) # need to add pyplot-digestible color map
+colorbar()
+
+
+##
+function whuzz()
+    nnn = 7
+    blabla = "ojee"
+    return nnn, blabla
+end
+
+nnn = whuzz()[2]
+
+
+
+
 
 
 

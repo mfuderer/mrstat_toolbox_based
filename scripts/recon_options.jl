@@ -12,7 +12,8 @@ function BLAKJac_load_default_recon_options!(recon_options)
 
     recon_options["kPattern"]  = 0           # function to generate (ky,kz)-pattern
     recon_options["rfName"]  = "from_optim" # name of the RF-shape function
-    recon_options["rfFile"] = "RFoptimCFullRand_210530H" # name of the file to read the RF shape from
+    recon_options["rfFile"]  = "dummy"      # name of the file to read the RF shape from
+    recon_options["rfFolder"]= "../RFsequences/" # name of the folder to read the RF pattern from
     recon_options["rflabel"] = ""           # For graph labels
     recon_options["nTR"]     = 1120         # number of simulated time points            
     recon_options["TR"]      = 0.01         # in seconds     
