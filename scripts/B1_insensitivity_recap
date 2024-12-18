@@ -829,7 +829,7 @@ recon_options["account_SAR"]   = true
 
 recon_options["sar_limit"] = 40^2/0.01 
 recon_options["emphasize_low_freq"] = true 
-recon_options["handleB1"] = "sensitivity" # "no" # "sensitivity" #
+recon_options["handleB1"] = "no" # "sensitivity" # "no" # "sensitivity" #
 recon_options["lambda_B1"] = 10.0     
 recon_options["opt_initialize"] = "cRandom30" 
 recon_options["opt_focus"] = "max"      
@@ -838,20 +838,21 @@ recon_options["opt_account_maxFlip"] = false
 recon_options["opt_keep_positive"] = false                           
 recon_options["opt_slow_phase"] = false # true                         
 recon_options["considerCyclic"] = false  
-recon_options["opt_emergeCriterion"] = 100 # 2000 # 500 # 2000
+recon_options["opt_emergeCriterion"] = 500 # 2000 # 500 # 2000
 ph = [] 
 # ph = zeros(nTR); ph .= 2.0;
 recon_options["opt_imposed_2nd_derivative_of_phase"] = ph
 recon_options["opt_iterations_limit"] = 1
 recon_options["sizeSteps"] = [6]  
 recon_options["B1metric"] = "multi_point_values" # "multi_point"         
-nRealizations = 10       
+nRealizations = 10   
+recon_options["rfFolder"]= "../RFsequences/"    
 
 fn_base = "dummy"
 for i in 1:nRealizations; goodseed = i
     stageText = ""
     portionRange = 0:0
-    fn = "/home/mfuderer/Documents/Julia/Capture/$fn_base($i).jld2"
+    fn = recon_options["rfFolder"]*"$fn_base($i).jld2"
     RFdeg = BLAKJac.BLAKJac_optimize(trajectorySet, recon_options, goodseed);
     FileIO.save(fn,"RFdeg",RFdeg)
 end 
