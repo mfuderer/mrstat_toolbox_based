@@ -1,0 +1,1213 @@
+┌ Info: Initialized logger
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/logger.jl:62
+┌ Info: Keeping readout oversampling for Cartesian trajectory
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/remove_readout_oversampling.jl:63
+┌ Info: Using all 1344 readouts for the reconstruction
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/select_readouts.jl:39
+┌ Info: No noise prewhitening applied
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/noise_decorrelation.jl:39
+┌ Info: No gradient delay correction needed for Cartesian trajectories.
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/gradient_delay.jl:40
+┌ Info: No density compensation needed for Cartesian trajectories
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/density_compensation.jl:45
+┌ Info: No k-space filter applied
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/kspace_filter.jl:42
+┌ Info: No ESPIRiT coil sensitivity estimation is performed
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/espirit.jl:43
+┌ Info: No conversion to virtual coils is performed
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/virtual_coils.jl:39
+┌ Info: Retaining all 1 coils
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/select_coils.jl:42
+┌ Info: Changing precision to f32
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/precision.jl:49
+┌ Info: Using CUDA DEFAULT_MATH mode
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/precision.jl:64
+┌ Info: Skipping SENSE decoupling
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/decoupling.jl:23
+┌ Info: Retaining all 1 locations
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/select_locations.jl:39
+┌ Info: Instantiating parameters in all voxels at [1.0, 0.05, 1.0, 0.0, 0.0, 0.0]
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/initial_guess.jl:36
+┌ Debug: Do interpolation here?
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/initial_guess.jl:59
+┌ Info: Using measured transmit field field as B₁ scaling factor
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/initial_guess.jl:60
+┌ Warning: Taking magnitude of measured transmit field
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/initial_guess.jl:62
+┌ Info: Demanding computations will be performed on GPU
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/computational_resource.jl:34
+┌ Info: CUDA device: CuDevice(0)
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/computational_resource.jl:35
+┌ Warning: Setting CUDA.allowscalar(true): This is a temporary fix until IterativeSolvers gets a new release.
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/proton_density_initialization.jl:37
+┌ Warning: It's not recommended to use allowscalar([true]) to allow scalar indexing.
+│ Instead, use `allowscalar() do end` or `@allowscalar` to denote exactly which operations can use scalar operations.
+└ @ GPUArraysCore /home/mfuderer/.julia/packages/GPUArraysCore/GMsgk/src/GPUArraysCore.jl:188
+┌ Info: Estimating proton density with LSQR
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/proton_density_initialization.jl:42
+┌ Info: No proton density-based mask is calculated
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/proton_density_mask.jl:48
+┌ Info: Scaling proton density globally
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/proton_density_scaling.jl:70
+┌ Info: Global proton density scaling factor: 1.4145349
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/proton_density_scaling.jl:81
+┌ Info: Starting non-linear solver
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/nonlinear_solver.jl:84
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:50
+┌ Info: Setting initial trust radius
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:57
+┌ Info: Initialize solver state
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:66
+┌ Info: ITERATION #1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     f: 23.449905
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 4.726829
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 4
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 14.297304
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 0.7130673
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 4.726829, Trust Radius: 4.726829
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too small
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:146
+┌ Info: ITERATION #2
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 9.152601
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Steihaug-CG converged with CG-residual = 0.5739496 after iteration 6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:204
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 8.5077095
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 0.9396629
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.499197, Trust Radius: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius just fine
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:151
+┌ Info: ITERATION #3
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.6448919
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Steihaug-CG failed to converge, CG-residual = 0.0028825544
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:220
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 0.22021079
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 0.98073745
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 0.5857025, Trust Radius: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius just fine
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:151
+┌ Info: ITERATION #4
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.42468113
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Steihaug-CG converged with CG-residual = 0.00016195897 after iteration 18
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:204
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 0.0019594133
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 1.001605
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 0.026052661, Trust Radius: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius just fine
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:151
+┌ Info: ITERATION #5
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227217
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 9.453658
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Direction of negative curvature encountered: should not occur because of Gauss-Newton method?
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:184
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:         minimize_quadratic_1d
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:471
+┌ Info:         evaluate_quadratic
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:488
+┌ Info:         minimize_quadratic_1d
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:506
+┌ Info:         gn: 240.17543, rf: 245.20949, sd: -1.2528876e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:517
+┌ Info:         The Inexact Newton step, restricted to feasible region, was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:523
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -249.51448
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 0.82667476
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -249.51448
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 4.726829
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 3.1888485e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 3.5478368
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 0.0011969644, Trust Radius: 4.726829
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius just fine
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:151
+┌ Info: ITERATION #6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.42271852
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 4.726829
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Direction of negative curvature encountered: should not occur because of Gauss-Newton method?
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:184
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -149.43642
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 1.0241102
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -149.43642
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 2.3634145
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.1817073
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.59085363
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.29542682
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.14771341
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.073856704
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.036928352
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.018464176
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.009232088
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.004616044
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.002308022
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.001154011
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.0005770055
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.00028850275
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -48.804253
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.1755695e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 0.00014425137
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -5.2154064e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -134.86798
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -5.2154064e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 7.212569e-5
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.4735928e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -103.49275
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.4735928e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 3.6062844e-5
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 2
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.026558e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -92.21879
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.026558e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.8031422e-5
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -1.9073486e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -123.13141
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -1.9073486e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 9.015711e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: 6.2584877e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: 67.7031
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 9.015712e-6, Trust Radius: 9.015711e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too small
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:146
+┌ Info: ITERATION #7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.8031422e-5
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -1.4603138e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -127.15857
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -1.4603138e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 9.015711e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.4735928e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -345.84427
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.4735928e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 4.5078555e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -1.6093254e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -409.63055
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -1.6093254e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 2.2539277e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.682209e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -130.68001
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.682209e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.1269639e-6
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -4.7683716e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -454.8733
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -4.7683716e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 5.6348193e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -5.9604645e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1125.3557
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -5.9604645e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 2.8174097e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -223.90675
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.4087048e-7
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -446.65814
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 7.043524e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -892.1654
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -5.9604645e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 3.521762e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.9802322e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -891.591
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.9802322e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.760881e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -2.9802322e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1782.6083
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -2.9802322e-8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 8.804405e-9
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -9.7476915e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 4.4022026e-9
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -4.8734534e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 2.2011013e-9
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -2.4366289e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 1.1005507e-9
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.2182899e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 5.502753e-10
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -6.0913882e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Find a smaller step (reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:156
+┌ Info:    Trust radius reduced to: 2.7513766e-10
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:165
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -3.0456787e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 2.7513766e-10, Trust Radius: 2.7513766e-10
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #8
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 6.8784416e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -7.614168e-13
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 6.8784416e-11, Trust Radius: 6.8784416e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #9
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.7196104e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.9035403e-13
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.7196104e-11, Trust Radius: 1.7196104e-11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #10
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 4.299026e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -4.7588496e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 4.299026e-12, Trust Radius: 4.299026e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #11
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.0747565e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.1897123e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.0747565e-12, Trust Radius: 1.0747565e-12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #12
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 2.6868912e-13
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -2.9742808e-15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 2.6868912e-13, Trust Radius: 2.6868912e-13
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #13
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 6.717228e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -7.435702e-16
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 6.717228e-14, Trust Radius: 6.717228e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.679307e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.8589255e-16
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.679307e-14, Trust Radius: 1.679307e-14
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 4.1982676e-15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -4.6473138e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 4.1982676e-15, Trust Radius: 4.1982676e-15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #16
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.0495669e-15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.1618284e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.0495669e-15, Trust Radius: 1.0495669e-15
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 2.6239172e-16
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -2.9045709e-18
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 2.6239172e-16, Trust Radius: 2.6239172e-16
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #18
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 6.559793e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -7.2614283e-19
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 6.559793e-17, Trust Radius: 6.559793e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #19
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 1.6399483e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -1.8153484e-19
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 1.6399476e-17, Trust Radius: 1.6399483e-17
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: ITERATION #20
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:75
+┌ Info:     Calling f,r,g,H = objective(x,'frgH')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:78
+┌ Info:     f: 0.4227179
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:82
+┌ Info:     Δ: 4.0998707e-18
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:83
+┌ Info:     Steihaug CG:
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:146
+┌ Info:         Fell out of trust radius after iteration 1
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/steihaug.jl:194
+┌ Info: Choose step
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:120
+┌ Info:           The Inexact Newton step was chosen
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:411
+┌ Info:     Calling f,r = objective(x_new,'fr')
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:125
+┌ Info:    reduction: -0.0
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:134
+┌ Info:    ratio: -4.5384363e-20
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:135
+┌ Info:     Step accepted
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/solver.jl:138
+┌ Info: Norm of step: 4.099869e-18, Trust Radius: 4.0998707e-18
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:131
+┌ Info: Trust Radius too large
+└ @ MRSTATToolbox.TrustRegionReflective /home/mfuderer/.julia/dev/MRSTATToolbox/src/TrustRegionReflective/src/utils.jl:140
+┌ Info: Undoing proton density scaling
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/undo_proton_density_scaling.jl:13
+┌ Info: Merge the 1 locations of the reconstructed parameter maps into one 3D array without location dimension
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/merge_locations.jl:21
+┌ Info: Saving reconstruction results to mrstat_recons/20241216_094923
+└ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/write_to_disk.jl:67
