@@ -588,6 +588,7 @@ lines_color_cycle = [p["color"] for p in plt.rcParams["axes.prop_cycle"]]
 #    Oscar set them to something that looked useful for pure simulation stuff but please double-check
 options = load_options_from_file(pwd()*"/scripts/mrstat_options_in_silico.toml")      
 
+slopes = zeros(length(cases))
 for (caseIndex,case) in enumerate(cases)
     for r in 1:nR[caseIndex]
         recon_options["rfFile"]  = nR[caseIndex]==1 ? case : case*"($r)"
@@ -667,7 +668,8 @@ for (caseIndex,case) in enumerate(cases)
 
         centerRange=nky÷2-50 : nky÷2+50
         color = lines_color_cycle[caseIndex]
-        data = rT2[centerRange] .- sT2[centerRange]   
+        data = rT2[centerRange] .- sT2[centerRange] 
+        xcoord = sVar[centerRange]  
         # data = rT1[centerRange] .- sT1[centerRange]   
         label = description[caseIndex]
         @show label, r, data[1]   
@@ -678,6 +680,7 @@ for (caseIndex,case) in enumerate(cases)
             axd.plot(sVar[centerRange], data, color=color)
         end
         if (nR[caseIndex]>1); axd.text(sVar[centerRange][1], data[1], string(r), color=color); end;
+        slopes[caseIndex] = (data[51+10]-data[51-10])/(xcoord[51+10]-xcoord[51-10])
     end
 end
 axd.set_xlabel("value of $(recon_options["simulationVariable"])")
@@ -698,6 +701,7 @@ end
 if recon_options["simulationVariable"]=="measured from phantom"
     axd.plot([0.0,0.02],[0.0,0.02],color="black")
 end
+@show slopes
 
 
 

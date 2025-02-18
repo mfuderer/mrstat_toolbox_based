@@ -1209,5 +1209,5 @@
 └ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/undo_proton_density_scaling.jl:13
 ┌ Info: Merge the 1 locations of the reconstructed parameter maps into one 3D array without location dimension
 └ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/merge_locations.jl:21
-┌ Info: Saving reconstruction results to mrstat_recons/20241216_094923
+┌ Info: Saving reconstruction results to mrstat_recons/20241228_093028
 └ @ MRSTATToolbox.MRSTAT /home/mfuderer/.julia/dev/MRSTATToolbox/src/MRSTAT/src/nodes/write_to_disk.jl:67
